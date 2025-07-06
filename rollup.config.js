@@ -5,29 +5,27 @@ import postcssImport from 'postcss-import';
 import postcssNested from 'postcss-nested';
 import autoprefixer from 'autoprefixer';
 
+const isDev = process.env.NODE_ENV !== 'production';
+
 export default {
   input: 'src/assets/js/main.js',
-
-  // → JS bundle stays beside main.js
   output: {
-    file: 'src/assets/js/bundle.js',
+    file: '_site/assets/js/bundle.js',
     format: 'iife',
-    sourcemap: true,
+    sourcemap: isDev,
   },
-
   plugins: [
     nodeResolve(),
-
-    // → CSS bundle stays beside main.css
     postcss({
-      extract: 'src/assets/css/bundle.css',
-      minimize: true,
-      sourceMap: true,
+      extract: true, // This will extract to bundle.css next to bundle.js
+      minimize: !isDev,
+      sourceMap: isDev,
       plugins: [postcssImport(), postcssNested(), autoprefixer()],
     }),
-
-    terser(),
-  ],
-
-  watch: { clearScreen: false },
+    !isDev && terser(),
+  ].filter(Boolean),
+  watch: {
+    clearScreen: false,
+    include: 'src/assets/**/*',
+  },
 };

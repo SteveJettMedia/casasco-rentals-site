@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Eleventy starter with Nunjucks, Rollup, and linting",
   "scripts": {
+    "prestart": "npm run build:rollup",
     "start": "npm-run-all --parallel dev:*",
     "build": "npm-run-all build:11ty build:rollup",
     "dev:11ty": "eleventy --serve --watch",

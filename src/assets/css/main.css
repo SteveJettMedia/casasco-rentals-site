@@ -1,13 +1,22 @@
+/* Import all component styles */
 @import './components/hero.css';
+@import './components/services.css';
 
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Base styles */
+:root {
+  --primary-color: #007bff;
+  --text-color: #333;
+  --bg-color: #fff;
 }
+
 body {
   color: red;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,10 +24,7 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  line-height: 1.5;
-  padding: 2rem;
-}
-
-h1 {
-  color: #333;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
 }

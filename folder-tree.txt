@@ -2,17 +2,30 @@ src
 ├── _data
 ├── _includes
 │   ├── components
-│   │   ├── hero.css
 │   │   └── hero.njk
 │   └── layouts
 │       └── base.njk
 ├── assets
 │   ├── css
-│   │   └── style.css
+│   │   ├── components
+│   │   │   ├── hero.css
+│   │   │   └── services.css
+│   │   └── main.css
 │   ├── images
 │   └── js
+│       ├── assets
+│       │   └── css
+│       │       ├── bundle.css
+│       │       └── bundle.css.map
+│       ├── src
+│       │   └── assets
+│       │       └── css
+│       │           ├── bundle.css
+│       │           └── bundle.css.map
+│       ├── bundle.js
+│       ├── bundle.js.map
 │       └── main.js
 ├── contact.njk
 └── index.njk
 
-9 directories, 7 files
+15 directories, 14 files
