@@ -1,0 +1,18 @@
+src/
+├── _data
+├── _includes
+│   ├── components
+│   │   ├── hero.css
+│   │   └── hero.njk
+│   └── layouts
+│       └── base.njk
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   └── js
+│       └── main.js
+├── contact.njk
+└── index.njk
+
+9 directories, 7 files
