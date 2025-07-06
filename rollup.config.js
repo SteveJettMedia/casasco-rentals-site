@@ -7,22 +7,27 @@ import autoprefixer from 'autoprefixer';
 
 export default {
   input: 'src/assets/js/main.js',
+
+  // → JS bundle stays beside main.js
   output: {
-    file: '_site/assets/js/bundle.js',
+    file: 'src/assets/js/bundle.js',
     format: 'iife',
     sourcemap: true,
   },
+
   plugins: [
     nodeResolve(),
+
+    // → CSS bundle stays beside main.css
     postcss({
-      extract: '../../assets/css/bundle.css',
+      extract: 'src/assets/css/bundle.css',
       minimize: true,
       sourceMap: true,
       plugins: [postcssImport(), postcssNested(), autoprefixer()],
     }),
+
     terser(),
   ],
-  watch: {
-    clearScreen: false,
-  },
+
+  watch: { clearScreen: false },
 };

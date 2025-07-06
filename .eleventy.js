@@ -3,6 +3,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/css');
   eleventyConfig.addPassthroughCopy('src/assets/images');
 
+  // Pass Through JS
+  eleventyConfig.addPassthroughCopy('src/assets/js');
+
   // Watch CSS for changes
   eleventyConfig.addWatchTarget('src/assets/css/');
 
