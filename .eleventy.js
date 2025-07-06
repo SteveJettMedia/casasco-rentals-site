@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
       input: 'src',
       output: '_site',
       includes: '_includes',
-      layouts: '_layouts',
+      layouts: '_includes/layouts', // NEW—relative to `input`
       data: '_data',
     },
     templateFormats: ['njk', 'md', 'html'],
