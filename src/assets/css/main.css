@@ -2,6 +2,7 @@
 @import './components/hero.css';
 @import './components/services.css';
 @import './components/footer.css';
+@import './components/nav.css';
 
 /* ========================================================================== */
 /* Main CSS – reusable baseline for 11ty + Nunjucks static sites               */
