@@ -1,150 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casasco Rentals – Theme Preview</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casasco Rentals – Theme Preview</title>
 
-  <!-- 1️⃣  Your design-token file -->
-  <link rel="stylesheet" href="theme.css">
+    <!-- 1️⃣  Your design-token file -->
+    <link rel="stylesheet" href="theme.css" />
 
-  <!-- 2️⃣  Minimal layout helpers just for the style-guide (keep separate from production CSS) -->
-  <style>
-    body { padding: var(--space-xl); font-size: 1rem; }
-    .sg-section   { margin-bottom: var(--space-2xl); }
-    .sg-grid      { display:grid; gap:var(--space-lg); grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-    .swatch       { border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-md); text-align:center }
-    .swatch__box  { height:80px; border-radius:var(--radius-sm); margin-bottom:var(--space-sm); }
-    .toggle-wrap  { display:flex; justify-content:flex-end; margin-bottom:var(--space-lg); }
-    button[data-theme-toggle] { all:unset; cursor:pointer; padding:var(--space-xs)var(--space-md); border:1px solid var(--color-border); border-radius:var(--radius-sm); }
-  </style>
-</head>
-<body>
-
-  <!-- Light / Dark switch -->
-  <div class="toggle-wrap">
-    <button data-theme-toggle>🌙 Toggle theme</button>
-  </div>
-
-  <!-- ###############  COLOR PALETTE ############### -->
-  <section class="sg-section">
-    <h2 class="text-heading" style="margin-bottom:var(--space-lg);">Color Tokens</h2>
-
-    <h3 class="text-heading">Neutral</h3>
-    <div class="sg-grid">
-      <!-- list every neutral token -->
-      <template id="swatch-template">
-        <div class="swatch">
-          <div class="swatch__box"></div>
-          <div class="text-muted"></div>
-        </div>
-      </template>
+    <!-- 2️⃣  Minimal layout helpers just for the style-guide (keep separate from production CSS) -->
+    <style>
+      body {
+        padding: var(--space-xl);
+        font-size: 1rem;
+      }
+      .sg-section {
+        margin-bottom: var(--space-2xl);
+      }
+      .sg-grid {
+        display: grid;
+        gap: var(--space-lg);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .swatch {
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+        text-align: center;
+      }
+      .swatch__box {
+        height: 80px;
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--space-sm);
+      }
+      .toggle-wrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: var(--space-lg);
+      }
+      button[data-theme-toggle] {
+        all: unset;
+        cursor: pointer;
+        padding: var(--space-xs) var(--space-md);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Light / Dark switch -->
+    <div class="toggle-wrap">
+      <button data-theme-toggle>🌙 Toggle theme</button>
     </div>
 
-    <h3 class="text-heading" style="margin-top:var(--space-xl);">Accent &amp; Semantic</h3>
-    <div class="sg-grid" id="accent-grid"></div>
-  </section>
+    <!-- ###############  COLOR PALETTE ############### -->
+    <section class="sg-section">
+      <h2 class="text-heading" style="margin-bottom:var(--space-lg);">
+        Color Tokens
+      </h2>
 
-  <!-- ###############  TYPOGRAPHY ############### -->
-  <section class="sg-section">
-    <h2 class="text-heading">Typography</h2>
-    <h1>Heading 1 – 36&nbsp;px / 2.25 rem</h1>
-    <h2>Heading 2 – 32&nbsp;px / 2 rem</h2>
-    <h3>Heading 3 – 28&nbsp;px / 1.75 rem</h3>
-    <p>Body copy: default <code>&lt;p&gt;</code>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed <span class="text-muted">muted text</span> link <a href="#" class="link">example link</a>.</p>
-  </section>
+      <h3 class="text-heading">Neutral</h3>
+      <div class="sg-grid">
+        <!-- list every neutral token -->
+        <template id="swatch-template">
+          <div class="swatch">
+            <div class="swatch__box"></div>
+            <div class="text-muted"></div>
+          </div>
+        </template>
+      </div>
 
-  <!-- ###############  BUTTONS ############### -->
-  <section class="sg-section">
-    <h2 class="text-heading">Buttons</h2>
-    <div style="display:flex; gap:var(--space-md); flex-wrap:wrap;">
-      <a href="#" class="btn-primary">Primary Button</a>
-      <a href="#" class="btn-outline">Outline Button</a>
-      <a href="#" class="btn-primary" disabled style="opacity:0.5; pointer-events:none;">Disabled State</a>
-    </div>
-  </section>
+      <h3 class="text-heading" style="margin-top:var(--space-xl);">
+        Accent &amp; Semantic
+      </h3>
+      <div class="sg-grid" id="accent-grid"></div>
+    </section>
 
-  <!-- ###############  CARD / BADGE ############### -->
-  <section class="sg-section">
-    <h2 class="text-heading">Card &amp; Badge</h2>
-    <div class="card" style="max-width:320px;">
-      <span class="badge" style="margin-bottom:var(--space-sm);">Badge</span>
-      <h3 class="text-heading" style="margin:0 0 var(--space-sm) 0;">Card Title</h3>
-      <p class="text-muted">Example of a card component using <code>.card</code> class. Hover to see elevation + shadow.</p>
-      <a href="#" class="btn-primary" style="margin-top:var(--space-md);">Call to Action</a>
-    </div>
-  </section>
+    <!-- ###############  TYPOGRAPHY ############### -->
+    <section class="sg-section">
+      <h2 class="text-heading">Typography</h2>
+      <h1>Heading 1 – 36&nbsp;px / 2.25 rem</h1>
+      <h2>Heading 2 – 32&nbsp;px / 2 rem</h2>
+      <h3>Heading 3 – 28&nbsp;px / 1.75 rem</h3>
+      <p>
+        Body copy: default <code>&lt;p&gt;</code>. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Sed
+        <span class="text-muted">muted text</span> link
+        <a href="#" class="link">example link</a>.
+      </p>
+    </section>
 
-  <!-- ###############  FORM CONTROLS ############### -->
-  <section class="sg-section">
-    <h2 class="text-heading">Form Elements</h2>
-    <form class="card" style="max-width:400px;">
-      <label class="form-label" for="input">Input</label>
-      <input id="input" class="form-input" placeholder="Type something…" />
+    <!-- ###############  BUTTONS ############### -->
+    <section class="sg-section">
+      <h2 class="text-heading">Buttons</h2>
+      <div style="display:flex; gap:var(--space-md); flex-wrap:wrap;">
+        <a href="#" class="btn-primary">Primary Button</a>
+        <a href="#" class="btn-outline">Outline Button</a>
+        <a
+          href="#"
+          class="btn-primary"
+          disabled
+          style="opacity:0.5; pointer-events:none;"
+          >Disabled State</a
+        >
+      </div>
+    </section>
 
-      <label class="form-label" for="select" style="margin-top:var(--space-md);">Select</label>
-      <select id="select" class="form-input">
-        <option>Option A</option><option>Option B</option>
-      </select>
+    <!-- ###############  CARD / BADGE ############### -->
+    <section class="sg-section">
+      <h2 class="text-heading">Card &amp; Badge</h2>
+      <div class="card" style="max-width:320px;">
+        <span class="badge" style="margin-bottom:var(--space-sm);">Badge</span>
+        <h3 class="text-heading" style="margin:0 0 var(--space-sm) 0;">
+          Card Title
+        </h3>
+        <p class="text-muted">
+          Example of a card component using <code>.card</code> class. Hover to
+          see elevation + shadow.
+        </p>
+        <a href="#" class="btn-primary" style="margin-top:var(--space-md);"
+          >Call to Action</a
+        >
+      </div>
+    </section>
 
-      <label class="form-label" for="textarea" style="margin-top:var(--space-md);">Textarea</label>
-      <textarea id="textarea" rows="3" class="form-input" placeholder="Your message…"></textarea>
+    <!-- ###############  FORM CONTROLS ############### -->
+    <section class="sg-section">
+      <h2 class="text-heading">Form Elements</h2>
+      <form class="card" style="max-width:400px;">
+        <label class="form-label" for="input">Input</label>
+        <input id="input" class="form-input" placeholder="Type something…" />
 
-      <button class="btn-primary" style="margin-top:var(--space-md); width:100%;">Submit</button>
-    </form>
-  </section>
+        <label
+          class="form-label"
+          for="select"
+          style="margin-top:var(--space-md);"
+          >Select</label
+        >
+        <select id="select" class="form-input">
+          <option>Option A</option>
+          <option>Option B</option>
+        </select>
 
-  <!-- ############################################## -->
-  <script>
-    /* ---------- dynamic color-swatch builder ---------- */
-    const tokens = {
-      neutral: ['900','700','400','200','100','50'],
-      accent : ['900','700','500','400'],
-      semantic: [
-        ['--color-primary','primary'],
-        ['--color-primary-hover','primary-hover'],
-        ['--color-primary-active','primary-active'],
-        ['--color-border','border'],
-        ['--color-text','text'],
-        ['--color-text-muted','text-muted'],
-        ['--color-surface','surface'],
-        ['--color-background','background']
-      ]
-    };
+        <label
+          class="form-label"
+          for="textarea"
+          style="margin-top:var(--space-md);"
+          >Textarea</label
+        >
+        <textarea
+          id="textarea"
+          rows="3"
+          class="form-input"
+          placeholder="Your message…"
+        ></textarea>
 
-    const tpl = document.getElementById('swatch-template');
-    const neutralGrid = tpl.parentElement;
-    tokens.neutral.forEach(n => {
-      const el = tpl.content.cloneNode(true);
-      const box = el.querySelector('.swatch__box');
-      const label = el.querySelector('.text-muted');
-      box.style.background = `var(--color-neutral-${n})`;
-      label.textContent = `--color-neutral-${n}`;
-      neutralGrid.appendChild(el);
-    });
+        <button
+          class="btn-primary"
+          style="margin-top:var(--space-md); width:100%;"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
 
-    const accentGrid = document.getElementById('accent-grid');
-    tokens.accent.forEach(n => {
-      const el = tpl.content.cloneNode(true);
-      el.querySelector('.swatch__box').style.background = `var(--color-accent-${n})`;
-      el.querySelector('.text-muted').textContent = `--color-accent-${n}`;
-      accentGrid.appendChild(el);
-    });
-    tokens.semantic.forEach(([varName, label]) => {
-      const el = tpl.content.cloneNode(true);
-      el.querySelector('.swatch__box').style.background = `var(${varName})`;
-      el.querySelector('.text-muted').textContent = varName;
-      accentGrid.appendChild(el);
-    });
+    <!-- ############################################## -->
+    <script>
+      /* ---------- dynamic color-swatch builder ---------- */
+      const tokens = {
+        neutral: ['900', '700', '400', '200', '100', '50'],
+        accent: ['900', '700', '500', '400'],
+        semantic: [
+          ['--color-primary', 'primary'],
+          ['--color-primary-hover', 'primary-hover'],
+          ['--color-primary-active', 'primary-active'],
+          ['--color-border', 'border'],
+          ['--color-text', 'text'],
+          ['--color-text-muted', 'text-muted'],
+          ['--color-surface', 'surface'],
+          ['--color-background', 'background'],
+        ],
+      };
 
-    /* ---------- light / dark theme switch ---------- */
-    const btn = document.querySelector('[data-theme-toggle]');
-    btn.addEventListener('click', () => {
-      const newMode = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
-      document.documentElement.dataset.theme = newMode;
-      btn.textContent = newMode === 'dark' ? '☀️ Toggle theme' : '🌙 Toggle theme';
-    });
-  </script>
-</body>
+      const tpl = document.getElementById('swatch-template');
+      const neutralGrid = tpl.parentElement;
+      tokens.neutral.forEach((n) => {
+        const el = tpl.content.cloneNode(true);
+        const box = el.querySelector('.swatch__box');
+        const label = el.querySelector('.text-muted');
+        box.style.background = `var(--color-neutral-${n})`;
+        label.textContent = `--color-neutral-${n}`;
+        neutralGrid.appendChild(el);
+      });
+
+      const accentGrid = document.getElementById('accent-grid');
+      tokens.accent.forEach((n) => {
+        const el = tpl.content.cloneNode(true);
+        el.querySelector('.swatch__box').style.background =
+          `var(--color-accent-${n})`;
+        el.querySelector('.text-muted').textContent = `--color-accent-${n}`;
+        accentGrid.appendChild(el);
+      });
+      tokens.semantic.forEach(([varName, label]) => {
+        const el = tpl.content.cloneNode(true);
+        el.querySelector('.swatch__box').style.background = `var(${varName})`;
+        el.querySelector('.text-muted').textContent = varName;
+        accentGrid.appendChild(el);
+      });
+
+      /* ---------- light / dark theme switch ---------- */
+      const btn = document.querySelector('[data-theme-toggle]');
+      btn.addEventListener('click', () => {
+        const newMode =
+          document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+        document.documentElement.dataset.theme = newMode;
+        btn.textContent =
+          newMode === 'dark' ? '☀️ Toggle theme' : '🌙 Toggle theme';
+      });
+    </script>
+  </body>
 </html>
-
