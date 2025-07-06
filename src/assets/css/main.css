@@ -1,4 +1,11 @@
-/* Import all component styles */
+/* ==========================================================================
+   Casas­co Main CSS  — reusable baseline for 11ty + Nunjucks static sites
+   Author: Steven Ayvar / Jett Media
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------- */
+/* 0. Component Imports                                                        */
+/* -------------------------------------------------------------------------- */
 @import './components/hero.css';
 @import './components/home_why-choose-us.css';
 @import './components/home_about.css';
@@ -6,13 +13,8 @@
 @import './components/footer.css';
 @import './components/nav.css';
 
-/* ========================================================================== */
-/* Main CSS – reusable baseline for 11ty + Nunjucks static sites               */
-/* Author: Steven Ayvar / Jett Media                                            */
-/* ========================================================================== */
-
 /* -------------------------------------------------------------------------- */
-/* 1. CSS Reset & Box‑Sizing                                                   */
+/* 1. CSS Reset & Box-Sizing                                                   */
 /* -------------------------------------------------------------------------- */
 *,
 *::before,
@@ -22,7 +24,6 @@
   padding: 0;
 }
 
-/* Remove default list styles on ul,ol elements with a role attribute */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
@@ -32,7 +33,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 a:hover,
 a:focus-visible {
   text-decoration: underline;
@@ -48,72 +48,71 @@ canvas {
   height: auto;
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
-}
-
-/* Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
 }
 
 /* -------------------------------------------------------------------------- */
 /* 2. Design Tokens (Custom Properties)                                        */
 /* -------------------------------------------------------------------------- */
 :root {
-  /* ========= Colors ========= */
-  --color-primary-500: #007bff;
-  --color-primary-400: #339eff;
-  --color-primary-600: #005fcc;
+  /* === Casasco theme mapped to existing variable names === */
+  --color-primary-400: #f22233; /* lighter accent */
+  --color-primary-500: #c43627; /* primary accent */
+  --color-primary-600: #a6121f; /* hover / darker */
 
-  --color-neutral-100: #ffffff;
-  --color-neutral-900: #111111;
-  --color-text: #333333;
-  --color-bg: #ffffff;
+  --color-neutral-100: #f2e7dc; /* card surface */
+  --color-neutral-900: #161616; /* darkest text */
 
-  /* Brand Gray Scale (legacy variables kept for compatibility) */
-  --gs-900: #323232;
-  --gs-700: #4a4a4a;
-  --gs-500: #8a8a8a;
-  --gs-300: #d7d7d7;
-  --gs-150: #f1f1f1;
-  --gs-100: #fafafa;
+  --color-text: #161616; /* body copy */
+  --color-bg: #ffffff; /* canvas / base */
 
-  /* ========= Typography ========= */
+  /* Legacy grayscale scale (updated to new neutrals) */
+  --gs-900: #161616;
+  --gs-700: #3d3d3d;
+  --gs-500: #a6918a;
+  --gs-300: #edeae8;
+  --gs-150: #f2e7dc;
+  --gs-100: #ffffff;
+
+  /* === Codestitch naming conventions (hex codes replaced) === */
+  --primary: #c43627;
+  --primaryLight: #f22233;
+  --secondary: #a6121f;
+  --secondaryLight: #59080f;
+
+  --headerColor: #3d3d3d;
+  --bodyTextColor: #161616;
+  --bodyTextColorWhite: #ffffff;
+
+  /* === Typography === */
   --ff-body:
     system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --ff-heading: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  --fs-900: clamp(3rem, 8vw+1rem, 5rem);
+  --fs-900: clamp(3rem, 8vw + 1rem, 5rem);
   --fs-700: 2.25rem;
   --fs-500: 1.25rem;
   --fs-400: 1rem;
   --fs-300: 0.875rem;
 
-  /* ========= Spacing ========= */
+  /* === Codestitch type tokens === */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+
+  /* === Spacing === */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
   --space-xl: 4rem;
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem; /* codestitch */
 
-  /* ========= Layout ========= */
+  /* === Layout === */
   --container-max: 70rem;
   --section-padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0d0d0d;
-    --color-text: #e4e4e4;
-  }
-} */
 
 /* -------------------------------------------------------------------------- */
 /* 3. Base Element Styles                                                      */
@@ -166,18 +165,15 @@ p {
 /* -------------------------------------------------------------------------- */
 /* 4. Layout Utilities                                                         */
 /* -------------------------------------------------------------------------- */
-
-/* Container - centers content and sets max‑width */
 .container {
   width: min(90%, var(--container-max));
   margin-inline: auto;
 }
 
-/* Flex & Grid helpers */
 .flex {
   display: flex;
   gap: var(--space-md);
-} /* generic flex */
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -188,13 +184,10 @@ p {
   display: grid;
   gap: var(--space-md);
 }
-
-/* Responsive 2‑col grid */
 .grid-2 {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
-/* Text alignment */
 .text-center {
   text-align: center;
 }
@@ -205,7 +198,6 @@ p {
   text-align: right;
 }
 
-/* Section spacing */
 .section {
   padding: var(--section-padding);
 }
@@ -213,18 +205,18 @@ p {
   padding-block: var(--space-lg);
 }
 
-/* Width helpers */
 .w-100 {
   width: 100%;
 }
 
-/* Spacing utilities (sample set) */
+/* Margin helpers */
 .mt-0 {
   margin-top: 0 !important;
 }
 .mb-0 {
   margin-bottom: 0 !important;
 }
+/* xs – xl helpers (top & bottom) */
 .mt-xs {
   margin-top: var(--space-xs) !important;
 }
@@ -270,125 +262,12 @@ p {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 5. Legacy Code‑Stitch Marketing Classes                                     */
+/* 5. Codestitch Marketing Classes (updated to new tokens)                     */
 /* -------------------------------------------------------------------------- */
-.cs-topper {
-  font-size: var(--space-md);
-  line-height: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--color-primary-500);
-  margin-bottom: 0.25rem;
-  display: block;
-}
-
-.cs-title {
-  font-size: var(--fs-700);
-  font-weight: 900;
-  line-height: 1.2em;
-  max-width: 43.75rem;
-  margin: 0 0 1rem 0;
-  color: var(--color-text);
-  position: relative;
-}
-
-.cs-text {
-  font-size: var(--fs-400);
-  line-height: 1.5em;
-  width: 100%;
-  max-width: 40.625rem;
-  margin: 0;
-  color: var(--color-text);
-}
-
-/* -------------------------------------------------------------------------- */
-/* 6. Component Placeholder Classes                                            */
-/* -------------------------------------------------------------------------- */
-/* Add component‑specific styles via @import in component sheets, e.g.:        */
-/* @import "./components/hero.css";                                           */
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.75em 1.25em;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  background: var(--color-primary-500);
-  color: var(--color-neutral-100);
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-.btn:hover,
-.btn:focus-visible {
-  background: var(--color-primary-600);
-}
-
-/* Card */
-.card {
-  background: var(--color-neutral-100);
-  border: 1px solid var(--gs-300);
-  border-radius: 0.5rem;
-  padding: var(--space-md);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
-}
-
-/* -------------------------------------------------------------------------- */
-/* 7. Utility Helpers                                                          */
-/* -------------------------------------------------------------------------- */
-
-/* Image cropping helpers */
-.crop-to-fit {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Debug border (toggle on demand) */
-.debug * {
-  outline: 1px solid rgba(255, 0, 0, 0.2);
-}
-
-/* End of main.css */
-
-:root {
-  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #ff6a3e;
-  --primaryLight: #ffba43;
-  --secondary: #ffba43;
-  --secondaryLight: #ffba43;
-  --headerColor: #1a1a1a;
-  --bodyTextColor: #4e4b66;
-  --bodyTextColorWhite: #fafbfc;
-  /* 13px - 16px */
-  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-  /* 31px - 49px */
-  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-  --bodyFontSize: 1rem;
-  /* 60px - 100px top and bottom */
-  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*:before,
-*:after {
-  /* prevents padding from affecting height and width */
-  box-sizing: border-box;
-}
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
   text-transform: uppercase;
-  text-align: inherit;
   letter-spacing: 0.1em;
   font-weight: 700;
   color: var(--primary);
@@ -400,7 +279,6 @@ body {
   font-size: var(--headerFontSize);
   font-weight: 900;
   line-height: 1.2em;
-  text-align: inherit;
   max-width: 43.75rem;
   margin: 0 0 1rem 0;
   color: var(--headerColor);
@@ -410,9 +288,52 @@ body {
 .cs-text {
   font-size: var(--bodyFontSize);
   line-height: 1.5em;
-  text-align: inherit;
   width: 100%;
   max-width: 40.625rem;
   margin: 0;
   color: var(--bodyTextColor);
 }
+
+/* -------------------------------------------------------------------------- */
+/* 6. Component Placeholder Classes                                            */
+/* -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1.25em;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  background: var(--color-primary-500);
+  color: var(--gs-100);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: var(--color-primary-600);
+}
+
+.card {
+  background: var(--gs-100);
+  border: 1px solid var(--gs-300);
+  border-radius: 0.5rem;
+  padding: var(--space-md);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7. Utility Helpers                                                          */
+/* -------------------------------------------------------------------------- */
+.crop-to-fit {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.debug * {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+/* End of main.css */
