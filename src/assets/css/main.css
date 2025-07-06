@@ -1,5 +1,6 @@
 /* Import all component styles */
 @import './components/hero.css';
+@import './components/home_why-choose-us.css';
 @import './components/home_about.css';
 @import './components/services.css';
 @import './components/footer.css';
@@ -107,12 +108,12 @@ svg {
   --section-padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #0d0d0d;
     --color-text: #e4e4e4;
   }
-}
+} */
 
 /* -------------------------------------------------------------------------- */
 /* 3. Base Element Styles                                                      */
