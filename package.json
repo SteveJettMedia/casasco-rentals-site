@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "npm run build:rollup",
     "start": "npm-run-all --parallel dev:*",
-    "build": "npm-run-all build:11ty build:rollup",
+    "build": "npm-run-all build:rollup build:11ty",
     "dev:11ty": "eleventy --serve --watch",
     "dev:rollup": "rollup -c -w",
     "build:11ty": "eleventy",
