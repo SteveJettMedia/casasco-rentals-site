@@ -1,0 +1,8 @@
+# netlify.toml -- Eleventy + Rollup
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+# (optional) lock the Node you develop with
+[build.environment]
+  NODE_VERSION = "20"
