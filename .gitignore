@@ -4,3 +4,5 @@ _site/
 *.log
 .env
 *.code-workspace
+# Local Netlify folder
+.netlify
