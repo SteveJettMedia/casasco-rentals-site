@@ -3,13 +3,18 @@
   "email": "johncasas.casasco@gmail.com",
   "phone": "361-815-2819",
   "phoneFormatted": "(361) 815-2819",
+  "domain": "casascorgv.com",
   "address": {
-    "lineOne": "First Address Line",
-    "lineTwo": "Second Address Line, If Needed",
-    "city": "Denver",
-    "county": "CO",
-    "postcode": "80206",
-    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+    "lineOne": "TBD – Headquarters Address",
+    "lineTwo": "Suite / Unit (if applicable)",
+    "city": "TBD",
+    "state": "TX",
+    "postcode": "TBD",
+    "mapLink": "https://goo.gl/maps/PLACEHOLDER"
   },
-  "domain": "casascorgv.com"
+  "cta": {
+    "type": "call",
+    "text": "Call Now",
+    "link": "tel:+13618152819"
+  }
 }
