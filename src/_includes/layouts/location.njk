@@ -1,0 +1,19 @@
+---
+layout: base.njk          # ➊ tell Eleventy to use your base template
+pagination:
+  data: collections.locations
+  size: 1
+  alias: loc
+  addAllPagesToCollections: true
+permalink: "/locations/{{ loc.slug }}/index.html"
+
+# (optional) compute the HTML <title> from the location data
+eleventyComputed:
+  title: "{{ loc.name }} Apartments"
+---
+
+<h1>{{ loc.name }}</h1>
+<p>{{ loc.marketing }}</p>
+
+{# Codestitch components can slot in anywhere here #}
+<a class="cta" href="{{ loc.cta.link }}">{{ loc.cta.text }}</a>
