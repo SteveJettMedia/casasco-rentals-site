@@ -16,6 +16,7 @@
 @import './components/location_hero.css';
 @import './components/location_sbs.css';
 @import './components/location_gallery.css';
+@import './components/location_map.css';
 
 /* -------------------------------------------------------------------------- */
 /* 1. CSS Reset & Box-Sizing                                                   */
