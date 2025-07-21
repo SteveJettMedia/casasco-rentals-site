@@ -1,8 +1,14 @@
 
 --- 
-layout: base.njk pagination: data: collections.locations size: 1 alias: loc
-permalink: "/locations/{{ loc.slug }}/index.html" eleventyComputed: title:
-"{{ loc.name }} Apartments | {{ site.name }}" 
+layout: base.njk 
+pagination: 
+  data: collections.locations 
+  size: 1 
+  alias: loc
+permalink: "/locations/{{ loc.slug }}/index.html" 
+eleventyComputed: 
+  title:
+  "{{ loc.name }} Apartments | {{ site.name }}" 
 ---
 
 <h1>Hello I am location page {{ loc.nam }}</h1>
