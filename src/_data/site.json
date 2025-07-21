@@ -1,0 +1,20 @@
+{
+  "name": "Casasco",
+  "email": "johncasas.casasco@gmail.com",
+  "phone": "361-815-2819",
+  "phoneFormatted": "(361) 815-2819",
+  "domain": "casascorgv.com",
+  "address": {
+    "lineOne": "TBD – Headquarters Address",
+    "lineTwo": "Suite / Unit (if applicable)",
+    "city": "TBD",
+    "state": "TX",
+    "postcode": "TBD",
+    "mapLink": "https://goo.gl/maps/PLACEHOLDER"
+  },
+  "cta": {
+    "type": "call",
+    "text": "Call Now",
+    "link": "tel:+13618152819"
+  }
+}
