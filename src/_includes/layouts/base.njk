@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="/assets/css/bundle.css" />
   </head>
   <body>
+    {% include "components/nav.njk" %}
     {{ content | safe }}
-
+    {% include "components/footer.njk" %}
     <script src="/assets/js/bundle.js" defer></script>
   </body>
 </html>
