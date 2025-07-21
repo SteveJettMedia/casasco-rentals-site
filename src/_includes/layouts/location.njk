@@ -1,16 +1,11 @@
-{# ─────────────  location.njk  ───────────── #}
----
-layout: base.njk                   # reuse your main site chrome
-pagination:
-  data: collections.locations      # iterate over the new collection
-  size: 1                          # one item per generated page
-  alias: loc                       # each page’s data is now {{ loc }}
-permalink: "/locations/{{ loc.slug }}/index.html"
 
-# Optional: generate a nice <title>
-eleventyComputed:
-  title: "{{ loc.name }} Apartments | {{ site.name }}"
+--- 
+layout: base.njk pagination: data: collections.locations size: 1 alias: loc
+permalink: "/locations/{{ loc.slug }}/index.html" eleventyComputed: title:
+"{{ loc.name }} Apartments | {{ site.name }}" 
 ---
+
+<h1>Hello I am location page {{ loc.nam }}</h1>
 
 <section class="hero">
   <img src="{{ loc.heroImage }}" alt="{{ loc.name }} exterior" />
@@ -26,7 +21,7 @@ eleventyComputed:
     <h2>At a Glance</h2>
     <ul class="stats-list">
       <li><strong>Rent:</strong> ${{ loc.rent }} / mo</li>
-      <li><strong>Size:</strong> {{ loc.sqft }} sq ft</li>
+      <li><strong>Size:</strong> {{ loc.sqft }} sq&nbsp;ft</li>
       <li><strong>Beds/Baths:</strong> {{ loc.bedBath }}</li>
       <li><strong>Lease Term:</strong> {{ loc.leaseTerm }}</li>
       <li><strong>Move-In:</strong> {{ loc.moveIn }}</li>
@@ -38,7 +33,6 @@ eleventyComputed:
   <div>
     <h2>Amenities</h2>
     <ul>
-      {# loop through the array inside locations.json #}
       {% for item in loc.amenities %}
         <li>{{ item }}</li>
       {% endfor %}
@@ -57,13 +51,12 @@ eleventyComputed:
   ></iframe>
 </section>
 
-{# Example gallery stub – loops through loc.gallery when you add images #}
-{% if loc.gallery.length %}
+{% if loc.gallery and loc.gallery.length %}
   <section class="gallery">
     <h2>Photo Gallery</h2>
     <div class="grid gallery-grid">
       {% for img in loc.gallery %}
-        <img src="{{ img.src }}" alt="{{ img.alt }}">
+        <img src="{{ img.src }}" alt="{{ img.alt }}" />
       {% endfor %}
     </div>
   </section>
