@@ -1,0 +1,9 @@
+--- layout: base.njk pagination: data: collections.locations # iterate over the
+new collection size: 1 # one item per generated page alias: loc # each page’s
+data is now {{ loc }} title: Primrose Ave ---
+{# 
+<ul class="location-list">
+  {% for loc in locations %}
+    <li>{{ loc.name }}</li>
+  {% endfor %}
+</ul> #}
