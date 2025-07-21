@@ -1,47 +1,53 @@
 module.exports = function (eleventyConfig) {
+  /* ─────────────────────────── Passthroughs ─────────────────────────── */
   // Pass through images
   eleventyConfig.addPassthroughCopy('src/assets/images');
 
-  // Watch CSS and JS source files
+  /* ────────────────────────── Custom Collections ─────────────────────── */
+  // Locations collection – makes the data in src/_data/locations.json
+  // available via collections.locations in your templates
+  eleventyConfig.addCollection('locations', () => {
+    // Adjust the path if you move your data file
+    return require('./src/_data/locations.json');
+  });
+
+  /* ─────────────────────── Extra Watch Targets ───────────────────────── */
   eleventyConfig.addWatchTarget('src/assets/css/');
   eleventyConfig.addWatchTarget('src/assets/js/');
 
-  // Copy the bundle.css from JS output to CSS folder after build
+  /* ────────────────────── Post-build CSS Relocation ──────────────────── */
   eleventyConfig.on('eleventy.after', async () => {
     const fs = require('fs').promises;
     const path = require('path');
 
     try {
-      // Check if bundle.css exists next to bundle.js
+      // Source and destination for bundle.css
       const cssSource = path.join('_site/assets/js/bundle.css');
       const cssDest = path.join('_site/assets/css/bundle.css');
 
-      // Create css directory if it doesn't exist
+      // Ensure the destination folder exists
       await fs.mkdir(path.dirname(cssDest), { recursive: true });
 
-      // Copy the CSS file
+      // Copy CSS (and sourcemap, if present) then clean up original
       await fs.copyFile(cssSource, cssDest);
-
-      // Remove the CSS file from JS folder
       await fs.unlink(cssSource);
-
-      // Also handle source map if it exists
       try {
         await fs.copyFile(cssSource + '.map', cssDest + '.map');
         await fs.unlink(cssSource + '.map');
-      } catch (e) {
-        // Source map might not exist in production
+      } catch {
+        /* map may not exist in production */
       }
-    } catch (e) {
-      // File might not exist on first run
+    } catch {
+      /* bundle.css may not exist on first run */
     }
   });
 
-  // Set browser sync config
+  /* ─────────────────────────── Browser-Sync ──────────────────────────── */
   eleventyConfig.setBrowserSyncConfig({
     files: ['_site/assets/css/*.css', '_site/assets/js/*.js'],
   });
 
+  /* ─────────────────────────── Directory Map ─────────────────────────── */
   return {
     dir: {
       input: 'src',
