@@ -14,6 +14,8 @@
 @import './components/nav.css';
 @import './components/featured-locations.css';
 @import './components/location_hero.css';
+@import './components/location_sbs.css';
+@import './components/location_gallery.css';
 
 /* -------------------------------------------------------------------------- */
 /* 1. CSS Reset & Box-Sizing                                                   */
