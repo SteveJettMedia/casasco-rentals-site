@@ -13,6 +13,7 @@
 @import './components/footer.css';
 @import './components/nav.css';
 @import './components/featured-locations.css';
+@import './components/location_hero.css';
 
 /* -------------------------------------------------------------------------- */
 /* 1. CSS Reset & Box-Sizing                                                   */
