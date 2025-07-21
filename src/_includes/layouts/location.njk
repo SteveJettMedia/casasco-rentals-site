@@ -3,6 +3,10 @@ layout: base.njk
 ---
 
 
+    {% include "components/location_hero.njk" %}
+    {{ content | safe }}
+    {% include "components/location_sbs.njk" %}
+    {% include "components/location_gallery.njk" %}
 
 
 {# OLD #}
