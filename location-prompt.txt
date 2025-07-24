@@ -1,0 +1,203 @@
+
+[Apartment Info]
+7/8/2025 14:45:55	John Casas	casasrick08@yahoo.com	3618152819	Text Message	2101 Kerria Avenue 	2101 Kerria Avenue, #6, McAllen 	Apartment / Condo	1	1		680	500	12 months	7/1/2025	Water, Trash	Great location, by Nolana Avenue and 23rd Street 	Yard / balcony			Smoking allowed in designated areas	Depends on size of pet	Respect the neighbors
+
+[Google map link]
+https://maps.app.goo.gl/CPcL7gYuFypQeQz97
+
+[images]
+src/assets/images/kerria-ave/IMG-20250703-WA0042.jpg   src/assets/images/kerria-ave/IMG-20250703-WA0045.jpg   src/assets/images/kerria-ave/IMG-20250703-WA0048.jpg  'src/assets/images/kerria-ave/WhatsApp Image 2025-07-03 at 19.16.42_e02d2948.jpg'
+ src/assets/images/kerria-ave/IMG-20250703-WA0043.jpg   src/assets/images/kerria-ave/IMG-20250703-WA0046.jpg   src/assets/images/kerria-ave/IMG-20250703-WA0049.jpg   src/assets/images/kerria-ave/hero.jpg
+ src/assets/images/kerria-ave/IMG-20250703-WA0044.jpg   src/assets/images/kerria-ave/IMG-20250703-WA0047.jpg   src/assets/images/kerria-ave/IMG-20250703-WA0050.jpg
+
+
+[kerria_gallery.njk]
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-48">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Property Gallery</span>
+            <h2 class="cs-title">901 English Avenue Duplex – See Inside and Out</h2>
+        </div>
+        <div class="cs-image-group">
+            <!-- Row 1 -->
+            <div class="cs-row cs-row-1">
+                <picture class="cs-picture cs-picture-1">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0015.jpg" alt="Front exterior of English Avenue duplex" width="420" height="567">
+                </picture>
+                <picture class="cs-picture cs-picture-2">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0016.jpg" alt="Spacious living area with natural light" width="420" height="630">
+                </picture>
+                <picture class="cs-picture cs-picture-3">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0017.jpg" alt="Modern kitchen area" width="420" height="512">
+                </picture>
+            </div>
+            <!-- Row 2 -->
+            <div class="cs-row cs-row-2">
+                <picture class="cs-picture cs-picture-1">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0018.jpg" alt="Bedroom with closet space" width="420" height="492">
+                </picture>
+                <picture class="cs-picture cs-picture-2">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0019.jpg" alt="Bathroom with clean design" width="420" height="517">
+                </picture>
+                <picture class="cs-picture cs-picture-3">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0020.jpg" alt="Laundry area with washer/dryer" width="420" height="629">
+                </picture>
+            </div>
+            <!-- Row 3 -->
+            <div class="cs-row cs-row-3">
+                <picture class="cs-picture cs-picture-1">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0021.jpg" alt="Garage or carport area" width="420" height="625">
+                </picture>
+                <picture class="cs-picture cs-picture-2">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0022.jpg" alt="Private outdoor space" width="420" height="452">
+                </picture>
+                <picture class="cs-picture cs-picture-3">
+                    <img loading="lazy" decoding="async" src="../../assets/images/english-ave/IMG-20250623-WA0023.jpg" alt="Neighborhood street view near UTRGV" width="420" height="629">
+                </picture>
+            </div>
+        </div>
+        <a href="../../gallery/english-ave.html" class="cs-button-solid">View Full Gallery</a>
+    </div>
+</section>
+
+[kerria_hero.njk]
+
+<!-- ============================================ -->
+<!--                   Hero                       -->
+<!-- ============================================ -->
+
+<section id="hero-2349">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Now Leasing</span>
+            <h2 class="cs-title">English Avenue Duplex</h2>
+            <p class="cs-text">
+                Spacious two-bedroom just one block from UTRGV in a quiet neighborhood. Enjoy water and trash included, private parking, and quick access to shopping and dining in central Edinburg.
+            </p>
+            <a href="tel:3618152819" class="cs-button-solid">Call Now</a>
+        </div>
+    </div>
+
+    <ul class="cs-stats">
+        <li class="cs-item">
+            <span class="cs-number">
+                <span class="cs-color">$</span>
+                850
+            </span>
+            <span class="cs-desc">Monthly Rent</span>
+        </li>
+        <li class="cs-item">
+            <span class="cs-number">
+                850
+            </span>
+            <span class="cs-desc">Square Feet</span>
+        </li>
+        <li class="cs-item">
+            <span class="cs-number">
+                2&nbsp;BR&nbsp;/&nbsp;2&nbsp;BA
+            </span>
+            <span class="cs-desc">Bed / Bath</span>
+        </li>
+    </ul>
+
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="../../assets/images/english_hero-img.jpg">
+        <source media="(min-width: 601px)" srcset="../../assets/images/english-ave/english_hero-img.jpg">
+        <img decoding="async" src="../../assets/images/english-ave/english_hero-img.jpg" alt="901 English Ave exterior" width="1800" height="860">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+                                
+<section id="services-2349">
+    <ul class="cs-card-group">
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch7.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Prime UTRGV Location</h2>
+                <p class="cs-item-text">
+                    Just a short walk—one block—from UTRGV campus, perfect for students and faculty.
+                </p>
+            </a>
+        </li>
+
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch8.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Included Utilities</h2>
+                <p class="cs-item-text">
+                    Water and trash service are included—fewer bills to manage each month.
+                </p>
+            </a>
+        </li>
+
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch9.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Comfort & Convenience</h2>
+                <p class="cs-item-text">
+                    In-unit or on-site washer/dryer, garage or carport parking, and private outdoor space.
+                </p>
+            </a>
+        </li>
+
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch10.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Close to Everything</h2>
+                <p class="cs-item-text">
+                    Minutes from local dining, shopping, and major roads—without the noise of city traffic.
+                </p>
+            </a>
+        </li>
+    </ul>
+</section>
+
+[kerria_sbs.njk]
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-2050">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <img loading="lazy" decoding="async" src="../../assets/images/english-ave/english_hero-img.jpg" alt="English Avenue duplex exterior" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose English Avenue</span>
+            <h2 class="cs-title">Spacious Living Near UTRGV</h2>
+            <p class="cs-text">
+                Just one block from UTRGV, this two-bedroom duplex offers a quiet retreat in a convenient location. Enjoy quick access to University Drive, local parks, and Edinburg's vibrant dining scene—all while living in a calm residential neighborhood.
+            </p>
+            <p class="cs-text">
+                With water and trash included, reserved parking, and pet-friendly policies, English Avenue is the ideal mix of affordability, comfort, and practicality.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-tick" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tick-with-circle.svg" alt="checkmark" width="24" height="24">
+                    1 block from UTRGV campus
+                </li>
+                <li class="cs-li">
+                    <img class="cs-tick" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tick-with-circle.svg" alt="checkmark" width="24" height="24">
+                    Reserved parking and garage/carport options
+                </li>
+                <li class="cs-li">
+                    <img class="cs-tick" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tick-with-circle.svg" alt="checkmark" width="24" height="24">
+                    Washer/dryer in-unit or on-site
+                </li>
+            </ul>
+            <a href="tel:3618152819" class="cs-button-solid">Call to Inquire</a>
+        </div>
+    </div>
+</section>
+
+[prompt]
+just change the text and images but keep the html structure the same. Leave the icons the same. Keep the same file names and structure. The files are organized by [file.type]. Keep the names and the structure just replace the images from the file path. Don't change the icons. Output to labeled code blocks by file name. 
