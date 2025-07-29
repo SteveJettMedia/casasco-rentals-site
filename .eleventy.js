@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   /* ─────────────────────────── Passthroughs ─────────────────────────── */
   // Pass through images
   eleventyConfig.addPassthroughCopy('src/assets/images');
+  eleventyConfig.addPassthroughCopy('src/assets/js');
 
   /* ────────────────────────── Custom Collections ─────────────────────── */
   // Locations collection – makes the data in src/_data/locations.json

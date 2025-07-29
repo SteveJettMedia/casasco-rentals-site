@@ -50,3 +50,5 @@ for (const item of dropDowns) {
   };
   item.addEventListener('click', onClick);
 }
+
+console.log(`Hello World! It's Steve`);
